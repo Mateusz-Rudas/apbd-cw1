@@ -8,6 +8,12 @@ public class Calculator
         if (numbers == null || numbers.Length == 0)
             throw new ArgumentException("Tablica nie może być pusta");
 
-        return numbers.Average();
+        int sum = 0;
+        foreach (int num in numbers)
+        {
+            sum += num;
+        }
+        return (double)sum / numbers.Length;
     }
 }
+
